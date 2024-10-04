@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaja</title>
+    
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/kosar.css">
+</head>
+<body>
+  
+  </div>
+  <header>
+    
+    <nav>
+      <ul>
+        <li><a href="index.html">Kezdőlap</a></li>
+        <li><a href="bolt.html">Kosár</a></li>
+      </ul>
+    </nav>
+  </header>
+    <p id="kosartitle">Kosarad tartalma:</p>
+    <div id="kosartartalom">
+        <table id="kajatablazat">
+          <thead>
+          <tr id="bevezeto">
+            <th>Név</th>
+            <th>Ár</th>
+            <th>Mennyiség</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tablazatbody">
+
+        </tbody>       
+        </table>
+        <h3>Fizetendő összeg: <span id="osszeg"></span> Ft</h3>
+    </div>
+    <div id="shipping-address">
+      <h2>Szállítási cím</h2>
+      <form id="address-form">
+        <label for="address-select">Válassz egy címet:</label><br>
+        <select id="address-select">
+          <option value="Budapest, Petőfi Sándor utca 3.">Otthon - Budapest, Petőfi Sándor utca 3.</option>
+          <option value="Budapest, Váci út 12.">Munkahely - Budapest, Váci út 12.</option>
+          <option value="new" id="newoptionadd">Új cím hozzáadása</option>
+        </select>
+    
+        <div id="new-address-fields" style="display: none;">
+          <label for="new-address">Új cím:</label><br>
+          <input type="text" id="new-address" placeholder="Írd be az új címet"><br>
+          <button type="submit" id="new-address-submit">Cím hozzáadása</button>
+        </div>
+      </form>
+    </div>
+    <div id="payment-method">
+      <h2>Fizetési mód</h2>
+      <form id="payment-form">
+        <label>
+          <input type="radio" name="payment" value="Készpénz" checked> Készpénz
+        </label><br>
+        <label>
+          <input type="radio" name="payment" value="Bankkártya"> Bankkártya
+        </label><br>
+        <label>
+          <input type="radio" name="payment" value="Utánvétel"> Utánvétel
+        </label>
+      </form>
+    </div>
+
+    <div id="order-button">
+      <button type="button" onclick="megrendeles()">Megrendelés leadása</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

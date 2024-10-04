@@ -1,0 +1,186 @@
+body {
+    text-align: center;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Regular.ttf);
+  }
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: "Poppins";
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+}
+table th,
+table td {
+    padding: 12px 15px;
+}
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+p {
+    font-size: 25pt;
+    font-weight: bold;
+}
+p, h1, h2, h3, li{
+    font-family: "Poppins";
+}
+a{
+    text-decoration: none;
+}
+#deletebutton{
+    font-family: "Poppins";
+    color: white;
+    background-color: #009879; 
+    border: none;
+}
+header {
+    background-color: #008c72;
+    padding: 10px 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  main {
+    max-width: 800px;
+    text-align: center;
+  }
+
+  
+  #order-summary {
+    margin-bottom: 30px;
+  }
+  #payment-method {
+    margin-bottom: 30px;
+  }
+  
+  #order-button button {
+    background-color: #008c72;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #order-button button:hover {
+    background-color: #006f5c;
+  }
+label{
+    font-family: "Poppins";
+
+}
+  /* Radio gombok stílusa */
+#payment-form label {
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  #payment-form input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #008c72;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background 0.3s ease;
+  }
+  
+  #payment-form input[type="radio"]:checked {
+    background-color: #008c72;
+    border-color: #008c72;
+  }
+  
+  #payment-form input[type="radio"]:hover {
+    border-color: #006f5c;
+  }
+  
+  #order-button button {
+    margin-top: 50px;
+    background-color: #008c72;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins";
+  }
+  
+  #order-button button:hover {
+    background-color: #006f5c;
+  }
+  #shipping-address {
+    margin-bottom: 30px;
+  }
+  
+  #address-form {
+    text-align: left;
+    display: inline-block;
+    margin-top: 10px;
+    font-family: "Poppins";
+  }
+  
+  #address-form select, #address-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #008c72;
+    border-radius: 4px;
+    font-family: "Poppins";
+  }
+  
+  #new-address-fields {
+    margin-top: 10px;
+  }
+#new-address-submit {
+    margin-top: 50px;
+    background-color: #008c72;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Poppins";
+}
+#newoptionadd {
+  font-weight: bold;
+}

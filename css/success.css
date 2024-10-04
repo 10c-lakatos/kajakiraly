@@ -1,0 +1,8 @@
+.sikeres {
+    text-align: center;
+    align-items: center;
+}
+#ido, #cim {
+    font-weight: bold;
+    color: #008c72;
+}
