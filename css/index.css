@@ -15,12 +15,42 @@ h1, h2 {
     float: left;
     margin-right: 10px;
     margin-left: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
 }
 .imgclass {
-    max-width: 250px;
+    max-width: 150px;
+    max-height: 150px;
 }
 .ara {
     background-color: #e4e0e0;
     text-align: center;
     font-size: medium;
+}
+.mennyisegmegado {
+    text-align: center; 
+}
+.mennyiseg {
+    color: #008c72;
+    text-align: center;
+}
+.mennyisegbuttonok {
+    background-color: #008c72;
+    color: white;
+    border: none;
+    font-size: large;
+    margin: 0 2px 0px 2px;
+}
+.kosarbabuttonok {
+    background-color: #008c72;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "Poppins";
+}
+  
+.kosarbabuttonok button:hover {
+    background-color: #006f5c;
 }
