@@ -55,7 +55,7 @@ function loadKajalista() {
     t1.innerHTML = item.name;
     var t2 = document.createElement("td");
     t2.innerHTML = item.ertek + " Ft";
-    osszeg += item.ertek;
+    osszeg += item.ertek * item.mennyiseg;
     var t3 = document.createElement("td");
     t3.innerHTML = item.mennyiseg;
     var t4 = document.createElement("td");

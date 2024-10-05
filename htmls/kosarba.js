@@ -29,16 +29,20 @@ document.addEventListener('DOMContentLoaded', function(){
         cElemInputMinusz.type = "button"
         cElemInputMinusz.value = "-"
         cElemInputMinusz.className = "mennyisegbuttonok"
+        cElemInputMinusz.onclick = function () { amountremove(i) }
         var cElemInputPlusz = document.createElement('input')
         cElemInputPlusz.type = "button"
         cElemInputPlusz.value = "+"
         cElemInputPlusz.className = "mennyisegbuttonok"
+        cElemInputPlusz.onclick = function () { amountadd(i) }
         var kakukk = document.createElement('p')
         kakukk.innerHTML = ""
         var cButton = document.createElement('button')
         cButton.type = "button"
+        cButton.id = i+"kosarhozadas"
         cButton.className = "kosarbabuttonok"
         cButton.innerHTML = "Kosárba helyezés"
+        cButton.onclick = function () { kosarhozadas(i) }
         document.getElementById('elemek').appendChild(cElemDiv)
         cElemDiv.appendChild(cElemNev)
         cElemDiv.appendChild(cElemAra)
@@ -51,3 +55,26 @@ document.addEventListener('DOMContentLoaded', function(){
         cElemDiv.appendChild(cButton)
     }
 })
+function amountadd(index) {
+    items.itemList[index].amount += 1
+    document.getElementById(items.itemList[index].name+'mennyiseg').innerHTML = items.itemList[index].amount
+}
+function amountremove(index) {
+    if (items.itemList[index].amount > 1) {
+        items.itemList[index].amount -= 1
+        document.getElementById(items.itemList[index].name+'mennyiseg').innerHTML = items.itemList[index].amount
+    } 
+}
+function kosarhozadas(index) {
+    addItemToKajalista(items.itemList[index].displayname, items.itemList[index].price, items.itemList[index].amount)
+    document.getElementById(index+'kosarhozadas').innerHTML = "Sikeres hozzáadás!"
+    setTimeout(() => {
+        document.getElementById(index+'kosarhozadas').innerHTML = "Kosárba helyezés" 
+    }, 2000)
+}
+function addItemToKajalista(name, ertek, mennyiseg) {
+    let kajalista = JSON.parse(localStorage.getItem('ujkajalista')) || [];
+    kajalista.push({ name, ertek, mennyiseg });
+    localStorage.setItem('ujkajalista', JSON.stringify(kajalista));
+    console.log('Item added to kajalista and saved to localStorage');
+  }
