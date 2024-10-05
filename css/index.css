@@ -1,0 +1,26 @@
+h1, h2 {
+    text-align: center;
+}
+.elemnev {
+    background-color: #f3f3f3;
+    text-align: center;
+    font-size: large;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+}
+.elemclass {
+    max-width: 250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    float: left;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.imgclass {
+    max-width: 250px;
+}
+.ara {
+    background-color: #e4e0e0;
+    text-align: center;
+    font-size: medium;
+}
