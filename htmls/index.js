@@ -21,11 +21,17 @@ document.addEventListener('DOMContentLoaded', function () {
       newOption.value = newAddress;
       newOption.textContent = newAddress;
       addressSelect.appendChild(newOption);
-
+      
       addressSelect.value = newAddress;
 
       newAddressFields.style.display = 'none';
       newAddressInput.value = ""; 
+      const newUj = document.createElement('option');
+      newUj.value = "new"
+      newUj.id = "newoptionadd"
+      newUj.innerHTML = "Új cím hozzáadása"
+      addressSelect.removeChild(document.getElementById('newoptionadd'))
+      addressSelect.appendChild(newUj)
     }
   });
 });
