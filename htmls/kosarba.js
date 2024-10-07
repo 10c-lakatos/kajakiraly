@@ -77,4 +77,5 @@ function addItemToKajalista(name, ertek, mennyiseg) {
     kajalista.push({ name, ertek, mennyiseg });
     localStorage.setItem('ujkajalista', JSON.stringify(kajalista));
     console.log('Item added to kajalista and saved to localStorage');
+    alert("Sikeresen hozzáadtad a kosárhoz az ételt!")
   }

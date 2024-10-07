@@ -90,9 +90,21 @@ function removeItemFromKajalista(index) {
   localStorage.setItem('ujkajalista', JSON.stringify(kajalista));
   loadKajalista();
 }
+function removeAllItemsFromKajalista() {
+  localStorage.removeItem('ujkajalista');
+  loadKajalista();
+}
 function megrendeles() {
-    localStorage.setItem('cim', document.getElementById('address-select').value)
-    window.location.replace("success.html");
+    let kajalista = JSON.parse(localStorage.getItem('ujkajalista')) || [];
+    if (kajalista.length == 0) {
+      alert("A kosár üres! Nem lehet rendelést leadni.");
+    } else {
+      localStorage.setItem('cim', document.getElementById('address-select').value)
+      window.location.replace("success.html");
+      removeAllItemsFromKajalista()
+      alert("Sikeres megrendelés!")
+    }
+    
 }
 document.addEventListener("DOMContentLoaded", function() {
   loadKajalista();
