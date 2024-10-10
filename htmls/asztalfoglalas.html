@@ -18,21 +18,22 @@
         </nav>
       </header>
       <h1>Asztalaink:</h1>
-      <table>
-        <tr>
-            <td>1. asztal</td>
-            <td>2. asztal</td>
-            <td>3. asztal</td>
-            <td>4. asztal</td>
-            <td>5. asztal</td>
-        </tr>
-        <tr>
-            <td>1. asztal</td>
-            <td>2. asztal</td>
-            <td>3. asztal</td>
-            <td>4. asztal</td>
-            <td>5. asztal</td>
-        </tr>
+      <table id="asztaloktabla">
+        <tbody id="asztaloktablabody">
+          
+      </tbody>
+        
       </table>
+      <h3>Asztal száma:</h3>
+      <div class="input">
+      <input type="text" value="1" maxlength="2" onkeypress="return onlyNumberKey(event)">
+    </div>
+    <h3>Teljes név:</h3>
+    <div class="input">
+      <input type="text" onkeypress="return onlyWORDKey(event)">
+      <br><button type="button" class="asztalbutton" onclick="asztalfoglalas()">Asztal foglalása</button>
+    </div>
+    
+      <script src="asztalfoglalas.js"></script>
 </body>
 </html>
