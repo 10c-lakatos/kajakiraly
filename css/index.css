@@ -9,10 +9,15 @@ h1, h2 {
     padding-bottom: 30px;
     margin-bottom: 0px;
 }
+#elemek {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .elemclass {
+    flex: 1 1 30%;
     max-width: 250px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    float: left;
     margin-right: 10px;
     margin-left: 10px;
     align-items: center;
@@ -53,4 +58,8 @@ h1, h2 {
   
 .kosarbabuttonok button:hover {
     background-color: #006f5c;
+}
+.focim {
+    margin-top: 30px;
+    margin-bottom: 30px;
 }

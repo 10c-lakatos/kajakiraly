@@ -27,7 +27,7 @@ input {
     font-family: "Poppins";
     text-align: center;
 }
-.asztalbutton {
+button {
     margin-top: 35px;
     background-color: #008c72;
     color: white;
@@ -35,4 +35,7 @@ input {
     padding: 10px 20px;
     cursor: pointer;
     font-family: "Poppins";
+}
+.rendszergazda {
+    float: right;
 }

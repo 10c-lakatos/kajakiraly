@@ -31,9 +31,11 @@
     <h3>Teljes név:</h3>
     <div class="input">
       <input type="text" onkeypress="return onlyWORDKey(event)" id="asztalname">
-      <br><button type="button" class="asztalbutton" onclick="asztalfoglalas()">Asztal foglalása</button>
+      <br><button type="button" onclick="asztalfoglalas()">Asztal foglalása</button>
     </div>
-    
+    <div class="rendszergazda">
+      <button type="button" onclick="admin()">Séfi belépés</button>
+    </div>
       <script src="asztalfoglalas.js"></script>
 </body>
 </html>

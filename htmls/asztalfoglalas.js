@@ -1,5 +1,11 @@
 let asztalokszama = 25 // asztalok száma
 let sorokszama = 0
+
+// sefek
+const sefek = [
+    {name:"Bence", pwd:"1234"}
+]
+
 // 0 - nem foglalt; 1 - foglalt
 var asztalok = {
 
@@ -74,6 +80,46 @@ document.addEventListener('DOMContentLoaded', function() {
         }   
     }
 })
+
+// asztalfoglalas admin-ja
+function admin() {
+    let user = prompt("Felhasználónév:")
+    let index = -1
+    for (let i=0; i < sefek.length; i++) {
+        if (sefek[i].name == user) {
+            index = i
+        }
+    }
+    if (index != -1) {
+        let lpwd = prompt(sefek[index].name+" jelszava:")
+        if (sefek[index].pwd == lpwd) {
+            let asztalvalue = prompt("Melyik asztal állapotát szeretnéd módosítani?")
+            if (!isNaN(asztalvalue)) {
+            if (parseInt(asztalvalue) <= asztalokszama && parseInt(asztalvalue) >= 1) {
+                
+                let allapot = prompt("Melyik állapot legyen (0,1):")
+                if (parseInt(allapot) == 0 || parseInt(allapot) == 1) {                   
+                        AsztalValue(asztalvalue, allapot)
+                        alert("Sikeres állapotváltás!")
+                        location.reload()
+                } else {
+                    alert("Nem jó érték!")
+                }
+            
+            } else {
+                alert("Túl magas, vagy túl alacsony szám!")
+            }
+            } else {
+                alert("Nem szám amit megadtál!")
+            }
+        } else {
+            alert("Rossz jelszó!")
+        }
+    } else {
+        alert("Nem található ilyen felhasználónév!")
+    }
+}
+
 // database functionok
 function AsztalValue(index, value) {
     localStorage.setItem(String(index)+'.asztal', value);
