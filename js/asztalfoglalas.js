@@ -1,10 +1,6 @@
 let asztalokszama = 25 // asztalok száma
 let sorokszama = 0
 
-// sefek
-const sefek = [
-    {name:"Bence", pwd:"1234"}
-]
 
 // 0 - nem foglalt; 1 - foglalt
 var asztalok = {
@@ -85,6 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function admin() {
     let user = prompt("Felhasználónév:")
     let index = -1
+    let sefek = config.sefek
     for (let i=0; i < sefek.length; i++) {
         if (sefek[i].name == user) {
             index = i

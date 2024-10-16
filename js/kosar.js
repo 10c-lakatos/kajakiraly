@@ -38,11 +38,16 @@ document.addEventListener('DOMContentLoaded', function () {
 //változók
 let osszeg = 0;
 
+//functionok
 function addItemToKajalista(name, ertek, mennyiseg) {
   let kajalista = JSON.parse(localStorage.getItem('ujkajalista')) || [];
   kajalista.push({ name, ertek, mennyiseg });
   localStorage.setItem('ujkajalista', JSON.stringify(kajalista));
-  console.log('Item added to kajalista and saved to localStorage');
+}
+function addRendeles(name, email, telefon, cim, paymentmethod, lista) {
+  let rendelesek = JSON.parse(localStorage.getItem('rendelesek')) || [];
+  rendelesek.push({ name, email, telefon, cim, paymentmethod, lista });
+  localStorage.setItem('rendelesek', JSON.stringify(rendelesek));
 }
 function loadKajalista() {
   let kajalista = JSON.parse(localStorage.getItem('ujkajalista')) || [];
@@ -94,17 +99,29 @@ function removeAllItemsFromKajalista() {
   localStorage.removeItem('ujkajalista');
   loadKajalista();
 }
-function megrendeles() {
+function megrendeles2() {
     let kajalista = JSON.parse(localStorage.getItem('ujkajalista')) || [];
     if (kajalista.length == 0) {
       alert("A kosár üres! Nem lehet rendelést leadni.");
     } else {
       localStorage.setItem('cim', document.getElementById('address-select').value)
-      window.location.replace("success.html");
+      window.location.replace("..//htmls/success.html");
       removeAllItemsFromKajalista()
       alert("Sikeres megrendelés!")
     }
     
+}
+// name, email, telefon, cim, paymentmethod, lista
+function megrendeles() {
+  let kajalista = JSON.parse(localStorage.getItem('ujkajalista')) || [];
+  if (kajalista.length != 0) {
+      addRendeles(document.getElementById('megrendelo-name').value, document.getElementById('megrendelo-email').value, document.getElementById('megrendelo-telefonszam').value, document.getElementById('address-select').value, document.getElementById('payment-select').value, kajalista)
+      removeAllItemsFromKajalista()
+      alert("Rendelésed sikeresen leadva!")
+      location.reload()
+  } else {
+    alert("A kosár üres! Nem lehet rendelést leadni.");
+  }
 }
 document.addEventListener("DOMContentLoaded", function() {
   loadKajalista();

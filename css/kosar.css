@@ -139,7 +139,24 @@ label{
     border-radius: 4px;
     font-family: "Poppins";
   }
-  
+  #payment-select {
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #008c72;
+    border-radius: 4px;
+    font-family: "Poppins";
+  }
+  #payment-label {
+    font-weight: bold;
+  }
+  input[type="text"] {
+    width: 15%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid #008c72;
+    border-radius: 4px;
+    font-family: "Poppins";
+  }
   #new-address-fields {
     margin-top: 10px;
   }

@@ -54,7 +54,13 @@
         </div>
       </form>
     </div>
-    <div id="payment-method">
+    <label for="payment-select" id="payment-label">Válassz egy fizetési módot:</label><br>
+        <select id="payment-select">
+          <option value="Bankkártya">Bankkártya (futárnál)</option>
+          <option value="Készpénz">Készpénz (futárnál)</option>
+          <option value="Apple Pay">Apple Pay</option>
+        </select>
+    <!--<div id="payment-method">
       <h2>Fizetési mód</h2>
       <form id="payment-form">
         <label>
@@ -67,11 +73,22 @@
           <input type="radio" name="payment" value="Helyszínen készpénz"> Helyszínen készpénz
         </label>
       </form>
+    </div>!-->
+    <div class="megrendelo-name">
+      <h2>Megrendelő neve:</h2>
+      <input type="text" id="megrendelo-name" placeholder="pl. Vitéz Jóska">
     </div>
-
+    <div class="megrendelo-email">
+      <h2>Megrendelő e-mail címe:</h2>
+      <input type="text" id="megrendelo-email" placeholder="pl. vitezjoska@gmail.com">
+    </div>
+    <div class="megrendelo-telefonszam">
+      <h2>Megrendelő telefonszáma:</h2>
+      <input type="text" id="megrendelo-telefonszam" placeholder="pl. +36708373344">
+    </div>
     <div id="order-button">
       <button type="button" onclick="megrendeles()">Megrendelés leadása</button>
     </div>
-    <script src="kosar.js"></script>
+    <script src="..//js/kosar.js"></script>
 </body>
 </html>
