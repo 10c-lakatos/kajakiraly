@@ -173,3 +173,16 @@ label{
 #newoptionadd {
   font-weight: bold;
 }
+.rendszergazda {
+  float: right;
+}
+.rendszergazda button {
+  margin-top: 35px;
+  margin-bottom: 35px;
+    background-color: #008c72;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "Poppins";
+}

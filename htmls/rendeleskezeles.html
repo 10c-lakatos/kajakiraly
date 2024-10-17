@@ -7,11 +7,26 @@
     <link rel="stylesheet" href="../css/rendeleskezeles.css">
 </head>
 <body>
-    <button type="button">Vissza a főoldalra</button>
+    <button type="button" onclick="vissza()">Vissza a főoldalra</button>
     <div class="rendelesek" id="rendelesek">
         <h2>Rendelések:</h2>
         <!--<button type="button" id="0.rendeles">Név: ASD ASD | E-mail: "asdasd@gmail.com" | Telefonszám: +34426452642 | Cím: BPDASASAD, ÉVSD UT 34. | Fizetési Mód: Apple Pay | Lista:</button>!-->
     </div>
+    <table id="kajatablazat">
+        <thead>
+        <tr id="bevezeto">
+          <th>Név</th>
+          <th>Ár</th>
+          <th>Mennyiség</th>
+        </tr>
+      </thead>
+      <tbody id="tablazatbody">
+        <tr>
+            <td colspan="3">Nincs kiválasztva rendelés!</td>
+        </tr>
+      </tbody>   
+      </table>
+      <h3>Összeg: <span id="osszeg">-</span> Ft</h3>   
     <script src="../config.js"></script>
     <script src="..//js/rendeleskezeles.js"></script>
 </body>
