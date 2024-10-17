@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let user = prompt("Felhasználónév:")
+    /*let user = prompt("Felhasználónév:")
     let index = -1
     for (let i=0; i < config.sefek.length; i++) {
         if (config.sefek[i].name == user) {
@@ -17,5 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         alert("Nem található ilyen felhasználónév!")
         window.location.replace("../index.html");
-    }
+    }*/
+    // utána
+    loadRendelesek()
 })
+function loadRendelesek() {
+  let rendelesek = JSON.parse(localStorage.getItem('rendelesek')) || [];
+
+  rendelesek.forEach((item, index) => {
+    var ujbutton = document.createElement('button')
+    ujbutton.type = "button"
+    ujbutton.id = String(index)+".rendeles"
+    ujbutton.innerHTML = "Név: "+item.name
+    document.getElementById('rendelesek').appendChild(ujbutton)
+  });
+}

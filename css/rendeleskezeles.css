@@ -11,3 +11,10 @@ button {
     cursor: pointer;
     font-family: "Poppins";
 }
+.rendelesek {
+    text-align: center;
+}
+h1, h2, h3, p {
+    text-align: center;
+    font-family: "Poppins";
+}
