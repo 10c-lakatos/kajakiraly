@@ -9,9 +9,15 @@ p, h1, h2, h3 {
 }
 
 header {
-    background-color: #008c72;
+    background-color: #4a8f8d;
     padding: 10px 0;
+    align-items: center; 
   }
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
   
   nav ul {
     list-style: none;

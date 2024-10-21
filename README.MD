@@ -1,14 +1,14 @@
-KAJAKIRÁLY WEBOLDAL - v1.7.4
+KAJAKIRÁLY WEBOLDAL - v1.7.6
 
 Ez a weboldal lényegében egy étteremnek a webshopja, ahonnan különböző ételeket/italokat rendelhet.
 
-v1.7.4:
+v1.7.6:
 
-- Séfi belépés a kosar-html-ről is
+- Kicsi re-design
 
-- Rendeléskezelésnél rendelések kilistázása
+- Más js elrendezés az index.html-en
 
-- Kilistázásnál itemek kilistázása is
+- Logo a headerben
 
 Dev:
 

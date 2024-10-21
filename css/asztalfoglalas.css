@@ -22,14 +22,14 @@ td {
 input {
     padding: 8px;
     margin-top: 10px;
-    border: 1px solid #008c72;
+    border: 1px solid #4a8f8d;
     border-radius: 4px;
     font-family: "Poppins";
     text-align: center;
 }
 button {
     margin-top: 35px;
-    background-color: #008c72;
+    background-color: #4a8f8d;
     color: white;
     border: none;
     padding: 10px 20px;

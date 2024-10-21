@@ -37,18 +37,18 @@ h1, h2 {
     text-align: center; 
 }
 .mennyiseg {
-    color: #008c72;
+    color: #4a8f8d;
     text-align: center;
 }
 .mennyisegbuttonok {
-    background-color: #008c72;
+    background-color: #4a8f8d;
     color: white;
     border: none;
     font-size: large;
     margin: 0 2px 0px 2px;
 }
 .kosarbabuttonok {
-    background-color: #008c72;
+    background-color: #4a8f8d;
     color: white;
     border: none;
     padding: 10px 20px;
