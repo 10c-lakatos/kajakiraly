@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaja</title>
-    
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/kosar.css">
+    <link rel="stylesheet" href="../css/kosar2.css">
 </head>
 <body>
-  
-  </div>
   <header>
-    <img src="..//img/logo.png" alt="" width="150px" height="150px" id="logo">
+    <img src="..//img/logo.png" alt="" id="logo">
     <hr size="1" color="white">
     <nav>
       <ul>
@@ -39,8 +36,9 @@
         </table>
         <h3>Fizetendő összeg: <span id="osszeg"></span> Ft</h3>
     </div>
+    <div style="text-align: center;">
     <div id="shipping-address">
-      <h2>Szállítási cím</h2>
+      <h2>Szállítási cím:</h2>
       <form id="address-form">
         <label for="address-select">Válassz egy címet:</label><br>
         <select id="address-select">
@@ -62,20 +60,6 @@
           <option value="Készpénz">Készpénz (futárnál)</option>
           <option value="Apple Pay">Apple Pay</option>
         </select>
-    <!--<div id="payment-method">
-      <h2>Fizetési mód</h2>
-      <form id="payment-form">
-        <label>
-          <input type="radio" name="payment" value="Apple Pay" checked> Apple Pay
-        </label><br>
-        <label>
-          <input type="radio" name="payment" value="Bankkártya"> Bankkártya
-        </label><br>
-        <label>
-          <input type="radio" name="payment" value="Helyszínen készpénz"> Helyszínen készpénz
-        </label>
-      </form>
-    </div>!-->
     <div class="megrendelo-name">
       <h2>Megrendelő neve:</h2>
       <input type="text" id="megrendelo-name" placeholder="pl. Vitéz Jóska">
@@ -94,6 +78,7 @@
     <div class="rendszergazda">
       <button type="button" onclick="window.location.replace('rendeleskezeles.html')">Séfi belépés</button>
     </div>
+  </div>
     <script src="..//js/kosar.js"></script>
 </body>
 </html>

@@ -1,65 +1,90 @@
-h1, h2 {
-    text-align: center;
+/* Global design settings */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
-.elemnev {
-    background-color: #f3f3f3;
-    text-align: center;
-    font-size: large;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 0px;
-}
-#elemek {
-    display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.elemclass {
-    flex: 1 1 30%;
-    max-width: 250px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    margin-right: 10px;
-    margin-left: 10px;
-    align-items: center;
-    text-align: center;
-    padding: 10px 10px 10px 10px;
-}
-.imgclass {
-    max-width: 150px;
-    max-height: 150px;
-}
-.ara {
-    background-color: #e4e0e0;
-    text-align: center;
-    font-size: medium;
-}
-.mennyisegmegado {
-    text-align: center; 
-}
-.mennyiseg {
-    color: #4a8f8d;
-    text-align: center;
-}
-.mennyisegbuttonok {
-    background-color: #4a8f8d;
-    color: white;
-    border: none;
-    font-size: large;
-    margin: 0 2px 0px 2px;
-}
-.kosarbabuttonok {
-    background-color: #4a8f8d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-family: "Poppins";
-}
-  
-.kosarbabuttonok button:hover {
-    background-color: #006f5c;
-}
+
+
 .focim {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.focim h1 {
+    color: #dc3545;
+    font-size: 2.5rem;
+}
+
+.focim h2 {
+    color: #6c757d;
+    font-size: 1.5rem;
+}
+
+#etelek, #italok {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+}
+
+.elemclass, .italclass {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 250px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.elemclass:hover, .italclass:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.elemclass img, .italclass img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.elemnev, .ara {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.kosarbabuttonok {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.kosarbabuttonok:hover {
+    background-color: #218838;
+}
+
+.mennyisegbuttonok {
+    padding: 5px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.mennyiseg {
+    font-size: 1.1rem;
+    margin: 10px 0;
 }

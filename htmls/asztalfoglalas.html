@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-      <img src="..//img/logo.png" alt="" width="150px" height="150px" id="logo">
+      <img src="..//img/logo.png" alt="" id="logo">
         <hr size="1" color="white">
         <nav>
           <ul>
@@ -19,20 +19,26 @@
           </ul>
         </nav>
       </header>
+      <h1>Foglalj most asztalt a KajaKirálynál!</h1>
+      <p style="text-align: center; font-size: 1.2rem; color: #6c757d;">Garantáljuk a legjobb helyet neked és szeretteidnek! Egy kattintás, és a királyi lakoma már csak rád vár.</p>
       <h1>Asztalaink:</h1>
+      
       <table id="asztaloktabla">
         <tbody id="asztaloktablabody">
           
       </tbody>
         
       </table>
-      <h3>Asztal száma:</h3>
+      <h3>Válaszd ki a neked tetsző asztalt:</h3>
+      <p style="text-align: center; color: #6c757d;">Nézd meg az elérhető asztalainkat, és add meg a számodra legmegfelelőbb számot!</p>
       <div class="input">
       <input type="text" value="1" maxlength="2" onkeypress="return onlyNumberKey(event)" id="asztalnumber">
     </div>
     <h3>Teljes név:</h3>
+    <p style="text-align: center; color: #6c757d;">Kérjük, add meg a teljes neved, hogy rögzíthessük a foglalásod!</p>
     <div class="input">
       <input type="text" onkeypress="return onlyWORDKey(event)" id="asztalname">
+      <p style="text-align: center; color: #6c757d;">Kattints, és foglald le a helyed most!</p>
       <br><button type="button" onclick="asztalfoglalas()">Asztal foglalása</button>
     </div>
     <div class="rendszergazda">
