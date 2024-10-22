@@ -1,5 +1,6 @@
+let kivalaszottindex = -1
 document.addEventListener('DOMContentLoaded', function() {
-    /*let user = prompt("Felhasználónév:")
+    let user = prompt("Felhasználónév:")
     let index = -1
     for (let i=0; i < config.sefek.length; i++) {
         if (config.sefek[i].name == user) {
@@ -17,13 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         alert("Nem található ilyen felhasználónév!")
         window.location.replace("../index.html");
-    }*/
+    }
     // utána
     loadRendelesek()
 })
 function loadRendelesek() {
   let rendelesek = JSON.parse(localStorage.getItem('rendelesek')) || [];
-
+  document.getElementById('rendelesek').innerHTML = ""
+  document.getElementById('osszeg').innerHTML = ""
   rendelesek.forEach((item, index) => {
     var ujbutton = document.createElement('button')
     ujbutton.type = "button"
@@ -37,6 +39,7 @@ function loadListRendeles(index) {
     let osszeg = 0
     let rendelesek = JSON.parse(localStorage.getItem('rendelesek')) || [];
     let kajalista = rendelesek[index].lista
+    kivalaszottindex = index
     const tableBody = document.getElementById('tablazatbody'); 
   tableBody.innerHTML = '';
 
@@ -64,6 +67,24 @@ function loadListRendeles(index) {
     tablerow.appendChild(ts1);
   }
 }
+function rendelesTorlese() {
+    if (kivalaszottindex != -1) {
+      removeARendeles(kivalaszottindex)
+      alert("Sikeresen kitörölted ezt rendelést!")
+      loadRendelesek()
+      document.getElementById('tablazatbody').innerHTML = `<tr>
+      <td colspan="3">Nincs kiválasztva rendelés!</td>
+  </tr>`
+    } else {
+      alert("Nincs kiválasztva rendelés!")
+    }
+}
 function vissza() {
     window.location.replace('../index.html')
+}
+
+function removeARendeles(index) {
+  let rendelesek = JSON.parse(localStorage.getItem('rendelesek')) || [];
+  rendelesek.splice(index, 1);
+  localStorage.setItem('rendelesek', JSON.stringify(rendelesek));
 }
