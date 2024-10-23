@@ -50,6 +50,7 @@ function addRendeles(name, email, telefon, cim, paymentmethod, lista) {
   localStorage.setItem('rendelesek', JSON.stringify(rendelesek));
 }
 function loadKajalista() {
+  osszeg = 0
   let kajalista = JSON.parse(localStorage.getItem('ujkajalista')) || [];
   const tableBody = document.getElementById('tablazatbody'); 
   tableBody.innerHTML = '';

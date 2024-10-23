@@ -1,188 +1,128 @@
+/* kosar.css */
 body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+#kosartitle {
     text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 20px 0;
+    color: #4A4A4A;
 }
 
-@font-face {
-    font-family: Poppins;
-    src: url(Poppins-Regular.ttf);
-  }
-table {
-    border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 0.9em;
-    font-family: "Poppins";
-    min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-table thead tr {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: center;
-}
-table th,
-table td {
-    padding: 12px 15px;
-}
-table tbody tr {
-    border-bottom: 1px solid #dddddd;
+#kosartartalom {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-table tbody tr:nth-of-type(even) {
-    background-color: #f3f3f3;
-}
-
-table tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
-}
-table tbody tr.active-row {
-    font-weight: bold;
-    color: #009879;
-}
-p {
-    font-size: 25pt;
-    font-weight: bold;
-}
-p, h1, h2, h3, li{
-    font-family: "Poppins";
-}
-a{
-    text-decoration: none;
-}
-#deletebutton{
-    font-family: "Poppins";
-    color: white;
-    background-color: #009879; 
-    border: none;
-}
-  #order-summary {
-    margin-bottom: 30px;
-  }
-  #payment-method {
-    margin-bottom: 30px;
-  }
-  
-  #order-button button {
-    background-color: #4a8f8d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  #order-button button:hover {
-    background-color: #006f5c;
-  }
-label{
-    font-family: "Poppins";
-
-}
-  /* Radio gombok stílusa */
-#payment-form label {
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  #payment-form input[type="radio"] {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #4a8f8d;
-    border-radius: 50%;
-    outline: none;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: background 0.3s ease;
-  }
-  
-  #payment-form input[type="radio"]:checked {
-    background-color: #4a8f8d;
-    border-color: #4a8f8d;
-  }
-  
-  #payment-form input[type="radio"]:hover {
-    border-color: #006f5c;
-  }
-  
-  #order-button button {
-    margin-top: 50px;
-    background-color: #4a8f8d;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: "Poppins";
-  }
-  
-  #order-button button:hover {
-    background-color: #006f5c;
-  }
-  #shipping-address {
-    margin-bottom: 30px;
-  }
-  
-  #address-form {
-    text-align: left;
-    display: inline-block;
-    margin-top: 10px;
-    font-family: "Poppins";
-  }
-  
-  #address-form select, #address-form input {
+#kajatablazat {
     width: 100%;
-    padding: 8px;
-    margin-top: 10px;
-    border: 1px solid #4a8f8d;
-    border-radius: 4px;
-    font-family: "Poppins";
-  }
-  #payment-select {
-    padding: 8px;
-    margin-top: 10px;
-    border: 1px solid #4a8f8d;
-    border-radius: 4px;
-    font-family: "Poppins";
-  }
-  #payment-label {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#kajatablazat th, #kajatablazat td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#kajatablazat th {
+    background-color: #FF5733;
+    color: #333;
+    font-weight: 600;
+}
+
+#kajatablazat td {
+    background-color: #fdfdfd;
+}
+
+#osszeg {
     font-weight: bold;
-  }
-  input[type="text"] {
-    width: 15%;
-    padding: 8px;
-    margin-top: 10px;
-    border: 1px solid #4a8f8d;
+    color: #FF5733; /* Narancssárga összeg kiemelés */
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #4A4A4A;
+}
+
+#shipping-address, .megrendelo-name, .megrendelo-email, .megrendelo-telefonszam {
+    margin-top: 20px;
+}
+#shipping-address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#shipping-address h2, .megrendelo-name h2, .megrendelo-email h2, .megrendelo-telefonszam h2 {
+    font-size: 1.2rem;
+    color: #4A4A4A;
+}
+
+#shipping-address form, .megrendelo-name input, .megrendelo-email input, .megrendelo-telefonszam input {
+    width: 30%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #e0e0e0;
     border-radius: 4px;
-    font-family: "Poppins";
-  }
-  #new-address-fields {
+}
+
+#payment-select, #address-select {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
     margin-top: 10px;
-  }
-#new-address-submit {
-    margin-top: 50px;
-    background-color: #4a8f8d;
+}
+#address-select {
+    width: 80%;
+}
+
+#order-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#order-button button {
+    padding: 15px 30px;
+    background-color: #FF5733; /* Narancssárga gomb */
     color: white;
     border: none;
-    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    font-family: "Poppins";
+    font-size: 1rem;
 }
-#newoptionadd {
-  font-weight: bold;
+
+#order-button button:hover {
+    background-color: #FF6F4A; /* Világosabb narancssárga hover effekt */
 }
+
 .rendszergazda {
-  float: right;
+    text-align: center;
+    margin-top: 20px;
 }
+
 .rendszergazda button {
-  margin-top: 35px;
-  margin-bottom: 35px;
-    background-color: #4a8f8d;
+    background-color: #D9534F; /* Piros gomb */
     color: white;
-    border: none;
     padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    font-family: "Poppins";
+}
+
+.rendszergazda button:hover {
+    background-color: #E67371; /* Világosabb piros hover effekt */
 }

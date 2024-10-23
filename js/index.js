@@ -101,3 +101,11 @@ function addItemToKajalista(name, ertek, mennyiseg) {
     console.log('Item added to kajalista and saved to localStorage');
     alert("Sikeresen hozzáadtad a kosárhoz az ételt!")
 }
+function valtsonNezet(nezet) {
+    const etelekDiv = document.getElementById('etelek');
+    const italokDiv = document.getElementById('italok');
+    etelekDiv.classList.remove('oszlopos', 'soros');
+    italokDiv.classList.remove('oszlopos', 'soros');
+    etelekDiv.classList.add(nezet);
+    italokDiv.classList.add(nezet);
+}

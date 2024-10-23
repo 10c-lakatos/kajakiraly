@@ -7,7 +7,6 @@ body {
     padding: 0;
 }
 
-
 .focim {
     text-align: center;
     margin: 40px 0;
@@ -31,6 +30,7 @@ body {
     margin: 20px;
 }
 
+/* Elem stílusok */
 .elemclass, .italclass {
     background-color: white;
     border: 1px solid #ccc;
@@ -87,4 +87,52 @@ body {
 .mennyiseg {
     font-size: 1.1rem;
     margin: 10px 0;
+}
+
+/* Nézet stílusok */
+.oszlopos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Soros nézet */
+.soros .elemclass, .soros .italclass {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+
+.soros .elemclass img, .soros .italclass img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Nézetválasztó stílus */
+.nezetvalaszto {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nezetvalaszto button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.nezetvalaszto button:hover {
+    background-color: #0056b3;
 }
