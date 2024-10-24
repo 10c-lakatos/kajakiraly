@@ -1,14 +1,18 @@
-KAJAKIRÁLY WEBOLDAL - v1.8.5
+# KAJAKIRÁLY WEBOLDAL - v1.8.6
 
 Ez a weboldal lényegében egy étteremnek a webshopja, ahonnan különböző ételeket/italokat rendelhet.
 
-v1.8.5:
+## v1.8.6:
+
+- képek az italokhoz
+
+## v1.8.5:
 
 - Nézetváltás a főoldalon.
 
 - Kicsi re-design
 
-v1.8:
+## v1.8:
 
 - teljes re-design
 
@@ -16,18 +20,18 @@ v1.8:
 
 - elemek hozzáadva az admin részéről
 
-v1.7.7:
+## v1.7.7:
 
 - rendelés törlése a rendeleskezeles.html-ben
 
-Dev:
+## Dev:
 
-Lakatos Bence
+* Lakatos Bence
 
-Contributors:
+## Contributors:
 
-Körmendi Levente
+* Körmendi Levente
 
-Preszter-Lajtai Bendegúz
+* Preszter-Lajtai Bendegúz
 
-Vellai-Nemes Samu
+* Vellai-Nemes Samu
